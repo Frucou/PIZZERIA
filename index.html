@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Jorge</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header class="main-header">
+            <a href="#"> <!-- Enlace del sitio irá aquí directiva v-bind -->
+                <h1 class="main-header__title title">
+                    Pizzería
+                </h1>
+            </a>
+        </header>
+        <main class="main-content">
+            <table class="seccion precios">
+
+                <tr>
+                    <th colspan="2">Tarifa de precios</th>
+                </tr>
+                <!-- Listaremos estas filas en Vue -->
+                <tr>
+                    <td>
+                        Jamón y queso
+                    </td>
+                    <td>
+                        4 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mozarella
+                    </td>
+                    <td>
+                        3 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Morrones
+                    </td>
+                    <td>
+                        2 €
+                    </td>
+                </tr>
+                
+
+                <tr>
+                    <td colspan="2">
+                        Los precios son revisados una vez por semana
+                    </td>
+                </tr>
+
+            </table>
+            <div class="section tarifa">
+                <div class="calcular">
+                    <ul role="list" class="campos">
+                        <li class="campo">
+                            <label for="pizzas">Pizzas (0001)</label>
+                            <!-- v-model propiedad codigo -->
+                            <select name="pizzas" id="pizzas">
+                                <option value="0001">Jamón y queso</option>
+                                <option value="0002">Mozarella</option>
+                                <option value="0003">Morrones</option>
+                            </select>
+                        </li>
+                        <li class="campo">
+                            <label for="precios">Precio pizza</label>
+                            <!-- propiedad precioUnitario -->
+                            <input type="text" id="precios" disabled>
+                        </li>
+                    </ul>
+                    <!-- Con la directiva v-on capturamos los eventos. prevent es el llamado en Vue "modificador" de evento para prevenir el envío del formulario  -->
+                    <form action="#" v-on:submit.prevent>
+                        <ul role="list" class="campos">
+                            <li class="campo">
+                                <label for="total">Total</label>
+                                <!-- la propiedad "total" va aquí -->
+                                <input disabled id="total" type="hidden">
+                                <span class="total">0</span>
+                                <div role="alert">No se ha seleccionado producto</div>
+                            </li>
+                            <li class="campo botones">
+                                <button id="mas">Añadir +</button>
+                                <!-- Este botón estará desactivado si el valor de total es cero -->
+                                <button id="menos">Quitar -</button>
+                            </li>
+
+                        </ul>
+                    </form>
+                </div>
+                <figure class="tarifa__imagen">
+                    <img src="src/images/jamonqueso.jpg" alt="Jamón y queso">
+                    <figcaption>Jamón y queso</figcaption>
+                </figure>
+            </div>
+        </main>
+        <!-- $data es una variable de cortesía de Vue que nos deja ver el modelo -->
+        <pre>{{$data.listaCompra}}</pre>
+    </div>
+    <script src="src/main.js"></script>
+</body>
+
+</html>

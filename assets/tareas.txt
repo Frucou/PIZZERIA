@@ -1,0 +1,41 @@
+-------------------------------
+-- INTERPOLACIÓN --------------
+-------------------------------
+1. Colocar el enlace de data enlaceSitio en el encabezado de la página (directiva v-bind)
+
+2. Colocar el dato "total" en el control de formulario de "id" total
+
+3. Hasta ahora estamos colocando los datos por interpolación. Pero en la interpolación también podemos utilizar expresiones. Una expresión es cualquier valor devuelto. Si el valor de total es cero dejaremos el campo en blanco en caso contrario pondremos el total. Utilizaremos el operador ternario: CONDICION?TRUE:FALSE
+
+4.El botón quitar estár desactivado si la variable total es cero
+
+5.El botón añadir estará desactivado si btnAnadirActivado es false
+
+
+---------------------------------------
+-- DIRECTIVA v-if v-else v-else-if ----
+---------------------------------------
+1. Si el total es igual a 0 se mostrará el mensaje "No se ha seleccionado producto"
+
+
+---------------------------------------
+-- DIRECTIVA v-on ---------------------
+---------------------------------------
+1. Evitar envío del formulario
+2. Al hacer click en boton incrementar en uno total (utilizar expresión)
+3. Al hacer click en botón quitar quitar uno del total (utilizar expresión)
+
+
+----------------------------------------
+-- DIRECTIVA v-for ---------------------
+----------------------------------------
+1. Importamos datos de assets/pizzas.js
+2. Los añadimos al modelo
+3. Cargamos el selector con datos (comentaremos el HTML)
+4. Cargamos la tabla con datos (comentaremos el html)
+
+
+------------------------------------------
+-- DIRECTIVA v-model ---------------------
+------------------------------------------
+1. Añadimos la directiva v-model de la propiedad codigo al selector
