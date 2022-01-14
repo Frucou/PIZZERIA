@@ -17,6 +17,12 @@
 ---------------------------------------
 1. Si el total es igual a 0 se mostrará el mensaje "No se ha seleccionado producto"
 
+------------------------------------------
+-- Clases dinámicas ---------------------
+------------------------------------------
+1.a Si la propiedad "total" se encuentra en cero añadir a la clase "total" la propiedad css "alert". Utilizar operador ternarios [condicion?'clase':'otraClase']
+1.b Resolver el ejercicio anterior con una propiedad computada
+2 Realiza una propieda computada que retorne la propiedad "sitio" en mayúsculas
 
 ---------------------------------------
 -- DIRECTIVA v-on ---------------------
@@ -39,3 +45,13 @@
 -- DIRECTIVA v-model ---------------------
 ------------------------------------------
 1. Añadimos la directiva v-model de la propiedad codigo al selector
+
+
+
+------------------------------------------
+-- COMPONENTES ---------------------------
+------------------------------------------
+1.a Comentar el pie de página
+1.b Importar el componente main-footer de la carpeta components para poner el pie de página
+2. Crear un modelo (función data) para obtener la fecha actual :new Date().getHours()+':'+new Date().getMinutes()+':'+new Date().getSeconds()
+3. Pasar el texto por props (comunicación entre componentes)

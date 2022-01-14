@@ -13,7 +13,8 @@
 <body>
     <div id="app">
         <header class="main-header">
-            <a href="#"> <!-- Enlace del sitio irá aquí directiva v-bind -->
+            <a href="#">
+                <!-- Enlace del sitio irá aquí directiva v-bind -->
                 <h1 class="main-header__title title">
                     Pizzería
                 </h1>
@@ -50,7 +51,7 @@
                         2 €
                     </td>
                 </tr>
-                
+
 
                 <tr>
                     <td colspan="2">
@@ -100,10 +101,15 @@
                     <img src="src/images/jamonqueso.jpg" alt="Jamón y queso">
                     <figcaption>Jamón y queso</figcaption>
                 </figure>
+                <!-- $data es una variable de cortesía de Vue que nos deja ver el modelo -->
+                <pre>{{$data.listaCompra}}</pre>
             </div>
         </main>
-        <!-- $data es una variable de cortesía de Vue que nos deja ver el modelo -->
-        <pre>{{$data.listaCompra}}</pre>
+        <footer class="main-footer">
+            @webferrol
+        </footer>
+        <main-footer></main-footer>
+
     </div>
     <script src="src/main.js"></script>
 </body>
